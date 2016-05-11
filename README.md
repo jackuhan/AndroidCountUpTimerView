@@ -9,18 +9,15 @@ Android 正计时控件，使用Canvas绘制，支持多种样式
 ![](https://raw.githubusercontent.com/iwgang/CountdownView/master/screenshot/screenshot.gif)  
 ![](https://raw.githubusercontent.com/iwgang/CountdownView/master/screenshot/screenshot2.png) 
 
-
 ### code
 ```
 CountupView mCvCountupView = (CountupView)findViewById(R.id.cv_CountupViewTest1);
 mCvCountupView.start(995550000); // 毫秒
-
-
 ```
 
 ### layout
 ``` xml
-<cn.iwgang.CountupView.CountupView
+<cn.iwgang.countupView.CountupView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:isHideTimeBackground="true"

@@ -1053,7 +1053,7 @@ public class CountupView extends View {
 
   @Override protected void onDetachedFromWindow() {
     super.onDetachedFromWindow();
-    stop();
+    //stop();
   }
 
   /**

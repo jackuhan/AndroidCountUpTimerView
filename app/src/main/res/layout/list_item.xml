@@ -15,7 +15,7 @@
         android:textColor="#000000"
         android:textSize="18sp" />
 
-    <cn.iwgang.countdownview.CountupView
+    <cn.iwgang.countuptime.CountupView
         android:id="@+id/cv_countdownView"
         android:layout_width="90dp"
         android:layout_height="30dp"

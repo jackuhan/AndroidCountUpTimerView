@@ -1,4 +1,4 @@
-package cn.iwgang.countdownview;
+package cn.iwgang.countuptime;
 
 import android.os.Handler;
 import android.os.Message;

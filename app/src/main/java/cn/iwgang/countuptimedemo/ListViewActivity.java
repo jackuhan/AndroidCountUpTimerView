@@ -1,4 +1,4 @@
-package cn.iwgang.countdownviewdemo;
+package cn.iwgang.countuptimedemo;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -12,7 +12,7 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
-import cn.iwgang.countdownview.CountupView;
+import cn.iwgang.countuptime.CountupView;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Timer;

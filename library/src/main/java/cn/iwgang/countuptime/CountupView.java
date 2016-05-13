@@ -1,4 +1,4 @@
-package cn.iwgang.countdownview;
+package cn.iwgang.countuptime;
 
 import android.content.Context;
 import android.content.res.TypedArray;

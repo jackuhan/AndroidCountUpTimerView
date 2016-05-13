@@ -1,13 +1,12 @@
-
 # CountupView
 Android 正计时控件，使用Canvas绘制，支持多种样式
 
 修改自https://github.com/iwgang/CountdownView
-简化计时逻辑，用handler计时，只支持秒计时
+简化计时逻辑，用handler计时，支持秒计时和10毫秒计时
 
 ### screenshot
-![](https://raw.githubusercontent.com/iwgang/CountdownView/master/screenshot/screenshot.gif)  
-![](https://raw.githubusercontent.com/iwgang/CountdownView/master/screenshot/screenshot2.png) 
+![](https://raw.githubusercontent.com/jackuhan/AndroidCountUpTimerView/master/screenshot/androidCountUpTimeView.gif)  
+![](https://raw.githubusercontent.com/jackuhan/AndroidCountUpTimerView/master/screenshot/screenshot2.png) 
 
 ### code
 ```
@@ -17,7 +16,7 @@ mCvCountupView.start(995550000); // 毫秒
 
 ### layout
 ``` xml
-<cn.iwgang.countupView.CountupView
+<cn.iwgang.countuptime.CountupView
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     app:isHideTimeBackground="true"

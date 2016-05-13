@@ -1,6 +1,5 @@
 package cn.iwgang.countdownviewdemo;
 
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;

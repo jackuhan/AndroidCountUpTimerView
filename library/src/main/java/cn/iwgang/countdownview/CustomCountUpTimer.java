@@ -11,11 +11,13 @@ public abstract class CustomCountUpTimer {
   private static final int MSG = 1;
   private long mOriginMillisInFuture;
   private long mMillisInFuture;
+  private final long mCountupInterval;
   private boolean isStop = false;
   private boolean isPause = false;
 
   public CustomCountUpTimer(long millisInFuture, long countDownInterval) {
     mMillisInFuture = millisInFuture;
+    mCountupInterval = countDownInterval;
   }
 
   private synchronized CustomCountUpTimer start(long millisInFuture) {
@@ -87,12 +89,12 @@ public abstract class CustomCountUpTimer {
           return;
         }
 
-        mMillisInFuture += 1000;
+        mMillisInFuture += mCountupInterval;
         if (mMillisInFuture <= 0) {
           onFinish();
         } else {
           onTick(mMillisInFuture);
-          sendMessageDelayed(obtainMessage(MSG), 1000);
+          sendMessageDelayed(obtainMessage(MSG), mCountupInterval);
         }
       }
     }

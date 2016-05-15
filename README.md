@@ -2,7 +2,26 @@
 Android 正计时控件，使用Canvas绘制，支持多种样式
 
 修改自https://github.com/iwgang/CountdownView
-简化计时逻辑，用handler计时，支持秒计时和10毫秒计时
+支持秒计时和10毫秒计时
+
+SystemClock.elapsedRealtime()计算时间，即使放在listview或者recyclerview中被回收了始终也不会停止。
+具体参考如下：
+```
+@Override protected void onDetachedFromWindow() {
+    LogUtils.d("被回收","");
+    stop();//现在不会导致bug
+    super.onDetachedFromWindow();
+  }
+
+  @Override protected void onAttachedToWindow() {
+    LogUtils.i("视图创建","");
+    if (null != mCustomCountUpTimer && mCustomCountUpTimer.isStarted()) {
+      mCustomCountUpTimer.recycledstart();
+      LogUtils.i("时钟复用","");
+    }
+    super.onAttachedToWindow();
+  }
+```
 
 ### screenshot
 ![](https://raw.githubusercontent.com/jackuhan/AndroidCountUpTimerView/master/screenshot/androidCountUpTimeView.gif)  

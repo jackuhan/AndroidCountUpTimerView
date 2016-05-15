@@ -1051,9 +1051,20 @@ public class CountupView extends View {
     }
   }
 
+
   @Override protected void onDetachedFromWindow() {
+    LogUtils.d("被回收","");
+    stop();//现在不会导致bug
     super.onDetachedFromWindow();
-    //stop();
+  }
+
+  @Override protected void onAttachedToWindow() {
+    LogUtils.i("视图创建","");
+    if (null != mCustomCountUpTimer && mCustomCountUpTimer.isStarted()) {
+      mCustomCountUpTimer.recycledstart();
+      LogUtils.i("时钟复用","");
+    }
+    super.onAttachedToWindow();
   }
 
   /**
